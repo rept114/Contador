@@ -1,4 +1,4 @@
-//
+ //
 //  ViewController.swift
 //  Calculadora de propinas
 //
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     var UIpago = "$ 0.0"
     var UIPpropina = "$ 0.0"
-    var UITpropina = "$ 0.0"
+    var UITpropina = Float (0.0);
     var UIpropina = "0%"
     var UIPpropinaS = 0
     var porcentaje = Float(0.0);
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         porcentaje = Float(UIpago)! * Float(UIPpropinaS)/Float(100.0)
         Pporcentaje = String(format: "%.2f", porcentaje)
         propina.text = "$ \(Pporcentaje)"
-        UITpropina = "\(Float(UIpago)! + porcentaje)"
+        UITpropina = Float(UIpago)! + porcentaje
         TTotal = String(format: "%.2f", UITpropina)
         Tpropina.text = "$ \(TTotal)"
     }
